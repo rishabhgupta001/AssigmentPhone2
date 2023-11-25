@@ -3,6 +3,7 @@ package com.sample.vkoelassign.ui.viewmodel
 import android.annotation.SuppressLint
 import android.app.Application
 import android.os.Build
+import android.util.Log
 import androidx.annotation.RequiresApi
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
@@ -43,9 +44,11 @@ class XViewModel(application: Application) : AndroidViewModel(application) {
                     venueListresponseData.postValue(responseModel)
                 }
                 .subscribe({ success ->
+                    Log.d("vvvv", "success ${success.venues?.size}")
                     success.statusCode = StatusCode.SUCCESS
                     venueListresponseData.postValue(success)
                 }, { it ->
+                    Log.d("vvvv", "it ${it.message}")
                     responseModel.msg = it.localizedMessage!!
                     responseModel.statusCode = StatusCode.ERROR
                     venueListresponseData.postValue(responseModel)

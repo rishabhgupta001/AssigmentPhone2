@@ -37,52 +37,48 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_10sdp"
             android:layout_marginEnd="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_5sdp"
             android:layout_marginBottom="@dimen/_10sdp"
             android:ellipsize="end"
-            android:text="Flipkart Support vvvvvvvvvvvv"
+            android:text="UB City"
             android:textColor="@color/colorFontDark"
             android:textSize="@dimen/_12sdp"
             app:layout_constraintBottom_toTopOf="@+id/orderId_txt_view"
-            app:layout_constraintEnd_toEndOf="@+id/from_name_txt_view"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintHorizontal_weight="0.9"
             app:layout_constraintStart_toEndOf="@+id/product_image_view"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_chainStyle="packed" />
+            app:layout_constraintVertical_chainStyle="spread" />
 
-        <TextView
-            android:id="@+id/from_name_txt_view"
-            android:layout_width="@dimen/_70sdp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_10sdp"
-            android:layout_marginEnd="@dimen/_10sdp"
-            android:layout_marginBottom="@dimen/_10sdp"
-            android:ellipsize="end"
-            android:maxLines="1"
-            android:text="15/09/2019"
-            android:textColor="@color/colorFontDark"
-            android:textSize="@dimen/_12sdp"
-            app:layout_constraintBaseline_toBaselineOf="@+id/title"
-            app:layout_constraintBottom_toTopOf="@+id/orderId_txt_view"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_chainStyle="spread"
-            app:layout_constraintHorizontal_weight="0.1"
-            app:layout_constraintStart_toEndOf="@+id/title"
-            app:layout_constraintTop_toTopOf="parent" />
+
 
         <TextView
             android:id="@+id/orderId_txt_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:text="Address"
+            android:textColor="@color/colorFontDark"
+            android:textSize="@dimen/_12sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/city_txt_view"
+            app:layout_constraintStart_toEndOf="@+id/product_image_view"
+            app:layout_constraintTop_toBottomOf="@+id/title" />
+
+        <TextView
+            android:id="@+id/city_txt_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
             android:layout_marginTop="@dimen/_10sdp"
             android:layout_marginEnd="@dimen/_5sdp"
-            android:text="OrederId"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:text="Address"
             android:textColor="@color/colorFontDark"
             android:textSize="@dimen/_12sdp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/product_image_view"
-            app:layout_constraintTop_toBottomOf="@+id/title" />
+            app:layout_constraintTop_toBottomOf="@+id/orderId_txt_view" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

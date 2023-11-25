@@ -69,18 +69,13 @@ class MovieAdapter(private var data: ArrayList<Venues>, private val dummyList: A
                     "NA"
                 )
 
-//            Utils.showBounceAnimOnText(
-//                itemView.context,
-//                itemBinding.orderIdTxtView,
-//                itemData.orderId!!
-//            )
-//
-//            val date = Utils.convertLongToTime(itemData.latestMessageTimestamp!!)
-//            Utils.showBounceAnimOnText(
-//                itemView.context,
-//                itemBinding.fromNameTxtView,
-//                date
-//            )
+            Utils.showBounceAnimOnText(
+                itemView.context,
+                itemBinding.cityTxtView,
+                itemData.city!!
+            )
+
+
 
             Handler().postDelayed({
                 if (!itemData.imageURL.isNullOrEmpty()) {
